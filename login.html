@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css\bootstrap.min.css">
+    <style>
+        .animated-background {
+            animation: changeColor 10s linear infinite;
+            background-image: linear-gradient(45deg, #FF5733, #FFBD33, #33FF57, #33FFBD, #5733FF, #BD33FF);
+            background-size: 400% 400%;
+        }
+
+        @keyframes changeColor {
+            0% {
+                background-position: 0 50%;
+            }
+            100% {
+                background-position: 100% 50%;
+            }
+        }
+    </style>
+</head>
+<body class="animated-background d-flex justify-content-center align-items-center vh-100">
+    <div class="container">
+        <div class="card">
+            <div class="card-header text-center">
+                <h1>Iniciar Sesión</h1>
+            </div>
+            <div class="card-body">
+                <form action="procesar_login.php" method="POST">
+                    <div class="mb-3">
+                        <label for="username" class="form-label">Usuario:</label>
+                        <input type="text" class="form-control" id="username" name="username" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Contraseña:</label>
+                        <input type="password" class="form-control" id="password" name="password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Iniciar Sesión</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="js\bootstrap.min.js"></script>
+</body>
+</html>
